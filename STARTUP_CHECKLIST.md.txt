@@ -1,0 +1,46 @@
+STARTUP_CHECKLIST.md
+
+# 🎮 Game Spot Admin — Startup Checklist
+
+Use this checklist every time you restart your computer or reopen the project.
+
+---
+
+## 1️⃣ Start MySQL (Database)
+
+- Make sure **MySQL Server** is running
+  - (XAMPP / MySQL Workbench / Windows Service — whichever we use)
+- Optional quick test:
+  ```sql
+  SELECT 1;
+
+Open project in vs code
+GAMESPOT/
+├─ backend/
+├─ frontend/
+└─ STARTUP_CHECKLIST.md
+
+
+Start the Backend (API)
+cd backend
+node server.js
+
+
+Expected output:
+✅ Connected to MySQL
+✅ API running on http://localhost:3000
+
+
+Start the Frontend (Go Live)
+
+Open:
+
+frontend/index.html
+
+
+Click Go Live (bottom-right in VS Code)
+
+Browser URL should be:
+
+http://127.0.0.1:5500/frontend/index.html
+

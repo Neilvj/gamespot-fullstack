@@ -1,0 +1,203 @@
+/* =====================================================
+   GAME SPOT — GLOBAL DESIGN TOKENS (MASTER LIST)
+===================================================== */
+:root {
+    /* Background & text colors */
+    --color-bg: #000000; /* Page background */
+    --color-card-bg: #111111; /* Cards / panels */
+    --color-text: #6cc6f6; /* Main text */
+    --color-muted: #cdcaca; /* Secondary text */
+
+    /* Borders */
+    --color-border: #2a2a2a;
+    --color-border-soft: #1f1f1f;
+
+    /* Status colors */
+    --color-danger: #ff4d4f;
+
+    /* Card-specific colors */
+    --color-card-title: var(--color-text);
+    --color-card-subtitle: var(--color-muted);
+
+    /* Typography (fonts) */
+    --font-family-base:
+        system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif;
+
+    --font-family-mono:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        'Liberation Mono', 'Courier New', monospace;
+
+    --font-family-card: var(--font-family-base);
+
+    /* Font sizes */
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-card-title: 18px;
+    --font-size-card-subtitle: 14px;
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+
+    /* Layout sizes */
+    --container-width: 1000px;
+
+    /* Borders & radius */
+    --border-1: 1px;
+    --radius-sm: 10px;
+    --radius-md: 12px;
+    --radius-pill: 999px;
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+html,
+body {
+    background-color: var(--color-bg);
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+    color: var(--color-text);
+}
+
+/* Bootstrap muted override */
+.text-secondary {
+    color: var(--color-muted) !important;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+.logo {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+/* =====================================================
+   FAKE LOGIN (HEADER)
+===================================================== */
+.fake-login {
+    min-width: 220px;
+    max-width: 260px;
+    background-color: var(--color-card-bg);
+    border: var(--border-1) solid var(--color-border);
+}
+
+.fake-login input {
+    font-size: var(--font-size-small);
+}
+
+/* =====================================================
+   CARDS / SECTIONS
+===================================================== */
+.card {
+    background-color: var(--color-card-bg);
+    border: var(--border-1) solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-family-card);
+}
+
+/* Card titles */
+.card h2,
+.card .card-title {
+    color: var(--color-card-title);
+    font-size: var(--font-size-card-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Card subtitles / small text */
+.card .card-subtitle,
+.card .small {
+    color: var(--color-card-subtitle);
+    font-size: var(--font-size-card-subtitle);
+}
+
+/* =====================================================
+   FORMS (Bootstrap-friendly dark inputs)
+===================================================== */
+label {
+    color: var(--color-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+input,
+select {
+    background-color: #000000 !important;
+    color: var(--color-text) !important;
+    border: var(--border-1) solid var(--color-border) !important;
+    font-family: var(--font-family-base);
+}
+
+input::placeholder {
+    color: var(--color-muted);
+}
+
+input:focus,
+select:focus {
+    border-color: #444 !important;
+    box-shadow: none !important;
+}
+
+/* Error messages */
+.error,
+.text-danger {
+    color: var(--color-danger) !important;
+}
+
+/* =====================================================
+   LIST / INVENTORY ROWS
+===================================================== */
+.list-group {
+    background-color: transparent;
+}
+
+.list-group-item {
+    background-color: var(--color-card-bg) !important;
+    color: var(--color-text) !important;
+    border: var(--border-1) solid var(--color-border-soft) !important;
+}
+
+/* =====================================================
+   BUTTON OVERRIDES (BOOTSTRAP FRIENDLY)
+===================================================== */
+.btn {
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family-base);
+}
+
+.btn-outline-secondary {
+    color: var(--color-text) !important;
+    border-color: var(--color-border) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #222 !important;
+    border-color: #444 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #3a0000 !important;
+}
+
+/* =====================================================
+   UTILITIES
+===================================================== */
+.font-mono {
+    font-family: var(--font-family-mono);
+}
