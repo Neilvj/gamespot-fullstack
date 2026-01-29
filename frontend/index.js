@@ -1,8 +1,7 @@
 // ===============================
 // Game Spot Frontend (FULL) — FIXED + COMPLETE
-// Matches YOUR index.html IDs and UI:
 // - Fake login
-// - Create + Edit using the SAME form UI (no prompts)
+// - Create + Edit using the SAME form UI
 // - Many-to-many: genres[] + platforms[]
 // - Filter by genre
 // - Sort (title/price) + direction toggle
@@ -180,7 +179,7 @@ function enterEditMode(game) {
     if (submitBtn) submitBtn.textContent = 'Save changes'
     if (cancelEditBtn) cancelEditBtn.classList.remove('d-none')
 
-    // Nice UX: scroll to form
+    // UX: scroll to form
     if (createForm) createForm.scrollIntoView({ behavior: 'smooth' })
 }
 
@@ -391,7 +390,7 @@ function renderGamesIntoList(games) {
                     return
                 }
 
-                // If you deleted the one you're editing, reset form
+                // If deleted reset form if we were editing this game
                 if (editingGameId === g.id) resetFormToAddMode()
 
                 loadGames()
@@ -426,7 +425,7 @@ if (createForm) {
         const genres = getSelectedGenres()
         const platforms = getSelectedPlatforms()
 
-        // Your UI shows SEK in a span, so we always send SEK
+        // UI shows SEK in a span, so we always send SEK
         const currency = 'SEK'
 
         if (
